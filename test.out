@@ -1,0 +1,450 @@
+../kernel/Makefile:EXTRAVERSION = .7@Jagan
+../kernel/include/linux/mmc/sdio_func.h:// Jagan+
+../kernel/include/linux/mmc/sdio_func.h:// Jagan-
+../kernel/include/linux/mmc/host.h:// Jagan+
+../kernel/include/linux/mmc/host.h:// Jagan-	
+../kernel/include/linux/fs.h:extern void not_sync_SD_partitions(void);				/* Jagan+ ... Jagan- */
+../kernel/include/linux/netdevice.h:// Jagan+	
+../kernel/include/linux/netdevice.h:// Jagan-
+../kernel/include/linux/netdevice.h:// Jagan+
+../kernel/include/linux/netdevice.h:// Jagan-
+../kernel/include/linux/msm_audio.h:// Jagan+
+../kernel/include/linux/msm_audio.h:// Jagan-
+../kernel/arch/arm/mach-msm/Makefile:# Jagan+
+../kernel/arch/arm/mach-msm/Makefile:# Jagan-
+../kernel/arch/arm/mach-msm/Makefile:# Jagan+
+../kernel/arch/arm/mach-msm/Makefile:# Jagan-
+../kernel/arch/arm/mach-msm/Makefile:# Jagan+
+../kernel/arch/arm/mach-msm/Makefile:# Jagan-
+../kernel/arch/arm/mach-msm/include/mach/msm_iomap-8x50.h:// Jagan+
+../kernel/arch/arm/mach-msm/include/mach/msm_iomap-8x50.h:// Jagan-
+../kernel/arch/arm/mach-msm/include/mach/board.h:	// Jagan+
+../kernel/arch/arm/mach-msm/include/mach/board.h:	// Jagan-
+../kernel/arch/arm/mach-msm/include/mach/board.h:// Jagan+
+../kernel/arch/arm/mach-msm/include/mach/board.h:// Jagan-
+../kernel/arch/arm/mach-msm/include/mach/auo_touch.h:*/ /* Jagan */
+../kernel/arch/arm/mach-msm/smd_private.h:	// Jagan+
+../kernel/arch/arm/mach-msm/smd_private.h:	// Jagan-
+../kernel/arch/arm/mach-msm/qdsp6/pcm_out.c:extern int Is_first_boot_flag ;					/* Jagan+ ... Jagan- */
+../kernel/arch/arm/mach-msm/qdsp6/pcm_out.c:// Jagan+
+../kernel/arch/arm/mach-msm/qdsp6/pcm_out.c:// Jagan-
+../kernel/arch/arm/mach-msm/qdsp6/pcm_out.c:// Jagan+
+../kernel/arch/arm/mach-msm/qdsp6/pcm_out.c:// Jagan-
+../kernel/arch/arm/mach-msm/qdsp6/pcm_out.c:// Jagan+
+../kernel/arch/arm/mach-msm/qdsp6/pcm_out.c:// Jagan-
+../kernel/arch/arm/mach-msm/qdsp6/q6audio_devices.h:// Jagan+
+../kernel/arch/arm/mach-msm/qdsp6/q6audio_devices.h:// Jagan-
+../kernel/arch/arm/mach-msm/qdsp6/q6audio_devices.h:// Jagan+		
+../kernel/arch/arm/mach-msm/qdsp6/q6audio_devices.h:// Jagan-		
+../kernel/arch/arm/mach-msm/qdsp6/q6audio_devices.h:// Jagan+ Add for FM audio path
+../kernel/arch/arm/mach-msm/qdsp6/q6audio_devices.h:// Jagan-	
+../kernel/arch/arm/mach-msm/qdsp6/msm_q6venc.c:	bool stop_called;					/* Jagan+ ... Jagan- */
+../kernel/arch/arm/mach-msm/qdsp6/q6audio.c:// Jagan+
+../kernel/arch/arm/mach-msm/qdsp6/q6audio.c:// Jagan-
+../kernel/arch/arm/mach-msm/qdsp6/q6audio.c:// Jagan+
+../kernel/arch/arm/mach-msm/qdsp6/q6audio.c:// Jagan-
+../kernel/arch/arm/mach-msm/qdsp6/q6audio.c:// Jagan+ Add for line out since lineout detection use AC 5V detection
+../kernel/arch/arm/mach-msm/qdsp6/q6audio.c:// Jagan-
+../kernel/arch/arm/mach-msm/qdsp6/q6audio.c:	TRACE("device_id = 0x%x, di->path = 0x%x\n", device_id, di->path);				/* Jagan+ ... Jagan- */
+../kernel/arch/arm/mach-msm/qdsp6/q6audio.c:// Jagan+
+../kernel/arch/arm/mach-msm/qdsp6/q6audio.c:// Jagan-
+../kernel/arch/arm/mach-msm/qdsp6/q6audio.c:	D(" device_id = %x\n", device_id);						/* Jagan+ ... Jagan- */
+../kernel/arch/arm/mach-msm/qdsp6/q6audio.c:	D("ADSP_AUDIO_IOCTL_CMD_SET_DEVICE_VOL: volume= %d, dev_id = 0x%x\n", rpc.volume, dev_id);			/* Jagan+ ... Jagan- */
+../kernel/arch/arm/mach-msm/qdsp6/q6audio.c:// Jagan+
+../kernel/arch/arm/mach-msm/qdsp6/q6audio.c:// Jagan-
+../kernel/arch/arm/mach-msm/qdsp6/q6audio.c:	D("ADSP_AUDIO_IOCTL_CMD_SET_STREAM_VOL: volume= %d\n", rpc.volume);				/* Jagan+ ... Jagan- */
+../kernel/arch/arm/mach-msm/qdsp6/q6audio.c:	D("++acdb_get_config_table, device_id = 0x%x, sample_rate = %d++\n", device_id, sample_rate);       /* Jagan+ ... Jagan- */
+../kernel/arch/arm/mach-msm/qdsp6/q6audio.c:	case ADSP_AUDIO_DEVICE_ID_NULL_SINK_FM_HEADSET:			/* Jagan+ ... Jagan- */
+../kernel/arch/arm/mach-msm/qdsp6/q6audio.c:case ADSP_AUDIO_DEVICE_ID_NULL_SINK_FM_SPEAKER:				/* Jagan+ ... Jagan- */
+../kernel/arch/arm/mach-msm/qdsp6/q6audio.c:// Jagan+
+../kernel/arch/arm/mach-msm/qdsp6/q6audio.c:// Jagan-
+../kernel/arch/arm/mach-msm/qdsp6/q6audio.c:	audio_update_acdb(audio_rx_device_id, acdb_id);						/* Jagan+ ... Jagan- */
+../kernel/arch/arm/mach-msm/qdsp6/q6audio.c:	audio_update_acdb(audio_tx_device_id, acdb_id);					/* Jagan+ ... Jagan- */
+../kernel/arch/arm/mach-msm/qdsp6/q6audio.c:// Jagan+
+../kernel/arch/arm/mach-msm/qdsp6/q6audio.c:// Jagan-	
+../kernel/arch/arm/mach-msm/qdsp6/q6audio.c:	TRACE("_audio_rx_clk_enable: device_group = %d\n", device_group);		/* Jagan+ ... Jagan- */
+../kernel/arch/arm/mach-msm/qdsp6/q6audio.c:// Jagan+
+../kernel/arch/arm/mach-msm/qdsp6/q6audio.c:// Jagan-
+../kernel/arch/arm/mach-msm/qdsp6/q6audio.c:// Jagan+
+../kernel/arch/arm/mach-msm/qdsp6/q6audio.c:// Jagan-
+../kernel/arch/arm/mach-msm/qdsp6/q6audio.c:// Jagan+
+../kernel/arch/arm/mach-msm/qdsp6/q6audio.c:// Jagan-
+../kernel/arch/arm/mach-msm/qdsp6/q6audio.c:// Jagan+
+../kernel/arch/arm/mach-msm/qdsp6/q6audio.c:// Jagan-
+../kernel/arch/arm/mach-msm/qdsp6/q6audio.c:	D("en = %d\n", en);					/* Jagan+ ... Jagan- */
+../kernel/arch/arm/mach-msm/qdsp6/q6audio.c:// Jagan+
+../kernel/arch/arm/mach-msm/qdsp6/q6audio.c:// Jagan-
+../kernel/arch/arm/mach-msm/qdsp6/q6audio.c:	adev = ADSP_AUDIO_DEVICE_ID_VOICE;					/* Jagan+ ... Jagan- */
+../kernel/arch/arm/mach-msm/qdsp6/q6audio.c:// Jagan+ Add for Line out directly control PMIC speaker
+../kernel/arch/arm/mach-msm/qdsp6/q6audio.c:// Jagan-
+../kernel/arch/arm/mach-msm/qdsp6/q6audio.c:// Jagan+
+../kernel/arch/arm/mach-msm/qdsp6/q6audio.c:// Jagan-
+../kernel/arch/arm/mach-msm/qdsp6/q6audio.c:// Jagan+ Add to support FM audio path 
+../kernel/arch/arm/mach-msm/qdsp6/q6audio.c:// Jagan-
+../kernel/arch/arm/mach-msm/qdsp6/q6audio.c:// Jagan+
+../kernel/arch/arm/mach-msm/qdsp6/q6audio.c:// Jagan-
+../kernel/arch/arm/mach-msm/qdsp6/q6audio.c:// Jagan+
+../kernel/arch/arm/mach-msm/qdsp6/q6audio.c:// Jagan-
+../kernel/arch/arm/mach-msm/qdsp6/q6audio.c:// Jagan+
+../kernel/arch/arm/mach-msm/qdsp6/q6audio.c:// Jagan-
+../kernel/arch/arm/mach-msm/qdsp6/q6audio.c:		// Jagan+   Add to check whether voice call start. If voice start, it cannot change tx sampling rate {*/
+../kernel/arch/arm/mach-msm/qdsp6/q6audio.c:		// Jagan-		
+../kernel/arch/arm/mach-msm/qdsp6/dsp_debug.c:	// Jagan+
+../kernel/arch/arm/mach-msm/qdsp6/dsp_debug.c:	// Jagan-
+../kernel/arch/arm/mach-msm/qdsp6/dsp_debug.c:// Jagan+
+../kernel/arch/arm/mach-msm/qdsp6/dsp_debug.c:// Jagan-
+../kernel/arch/arm/mach-msm/qdsp6/dal_audio.h:// Jagan+
+../kernel/arch/arm/mach-msm/qdsp6/dal_audio.h:// Jagan-
+../kernel/arch/arm/mach-msm/qdsp6/dal_audio.h:// Jagan+
+../kernel/arch/arm/mach-msm/qdsp6/dal_audio.h:// Jagan-
+../kernel/arch/arm/mach-msm/qdsp6/audio_ctl.c:// Jagan+
+../kernel/arch/arm/mach-msm/qdsp6/audio_ctl.c:// Jagan-
+../kernel/arch/arm/mach-msm/qdsp6/audio_ctl.c:atomic_t voice_started=ATOMIC_INIT(0);  					/* Jagan+ ... Jagan- */
+../kernel/arch/arm/mach-msm/qdsp6/audio_ctl.c:	if (atomic_read(&voice_started)) {					/* Jagan+ ... Jagan- */
+../kernel/arch/arm/mach-msm/qdsp6/audio_ctl.c:	atomic_set(&voice_started,1);					/* Jagan+ ... Jagan- */
+../kernel/arch/arm/mach-msm/qdsp6/audio_ctl.c:	if (atomic_read(&voice_started)) {				/* Jagan+ ... Jagan- */
+../kernel/arch/arm/mach-msm/qdsp6/audio_ctl.c:		atomic_set(&voice_started,0);				/* Jagan+ ... Jagan- */
+../kernel/arch/arm/mach-msm/qdsp6/audio_ctl.c:// Jagan+		
+../kernel/arch/arm/mach-msm/qdsp6/audio_ctl.c:// Jagan-			
+../kernel/arch/arm/mach-msm/qdsp6/audio_ctl.c:// Jagan+
+../kernel/arch/arm/mach-msm/qdsp6/audio_ctl.c:// Jagan-		
+../kernel/arch/arm/mach-msm/qdsp6/audio_ctl.c:			if (atomic_read(&voice_started)) {			/* Jagan+ ... Jagan- */
+../kernel/arch/arm/mach-msm/devices-qsd8x50.c:// Jagan+
+../kernel/arch/arm/mach-msm/devices-qsd8x50.c:// Jagan-
+Binary file ../kernel/arch/arm/mach-msm/.board-qsd8x50_camera.c.swp matches
+../kernel/arch/arm/mach-msm/1:// Jagan+
+../kernel/arch/arm/mach-msm/1:// Jagan-
+../kernel/arch/arm/mach-msm/1:#define MSM_PMEM_SF_SIZE	0x1C91000 /* Jagan+ ... Jagan- */
+../kernel/arch/arm/mach-msm/1:// Jagan+
+../kernel/arch/arm/mach-msm/1:// Jagan-
+../kernel/arch/arm/mach-msm/1:// Jagan+
+../kernel/arch/arm/mach-msm/1:// Jagan-
+../kernel/arch/arm/mach-msm/1:// Jagan+
+../kernel/arch/arm/mach-msm/1:// Jagan-
+../kernel/arch/arm/mach-msm/1:// Jagan+
+../kernel/arch/arm/mach-msm/1:// Jagan-
+../kernel/arch/arm/mach-msm/1:// Jagan+	
+../kernel/arch/arm/mach-msm/1:// Jagan-
+../kernel/arch/arm/mach-msm/1:// Jagan+ 
+../kernel/arch/arm/mach-msm/1:// Jagan-
+../kernel/arch/arm/mach-msm/1:// static int mddi_power_save_on; /* Jagan+ ... Jagan- */
+../kernel/arch/arm/mach-msm/1:// Jagan+
+../kernel/arch/arm/mach-msm/1:// Jagan-
+../kernel/arch/arm/mach-msm/1:// Jagan+
+../kernel/arch/arm/mach-msm/1:// Jagan-
+../kernel/arch/arm/mach-msm/1:// Jagan+
+../kernel/arch/arm/mach-msm/1:// Jagan-
+../kernel/arch/arm/mach-msm/1:// Jagan+
+../kernel/arch/arm/mach-msm/1:// Jagan-
+../kernel/arch/arm/mach-msm/1:// Jagan+
+../kernel/arch/arm/mach-msm/1:// Jagan-
+../kernel/arch/arm/mach-msm/1:// Jagan+
+../kernel/arch/arm/mach-msm/1:// Jagan-
+../kernel/arch/arm/mach-msm/1:// Jagan+
+../kernel/arch/arm/mach-msm/1:// Jagan-
+../kernel/arch/arm/mach-msm/1:		// Jagan+
+../kernel/arch/arm/mach-msm/1:		// Jagan-
+../kernel/arch/arm/mach-msm/1:// Jagan+
+../kernel/arch/arm/mach-msm/1:// Jagan-
+../kernel/arch/arm/mach-msm/1:// Jagan+
+../kernel/arch/arm/mach-msm/1:// Jagan-
+../kernel/arch/arm/mach-msm/1:// Jagan+
+../kernel/arch/arm/mach-msm/1:// Jagan-
+../kernel/arch/arm/mach-msm/board-qsd8x50_austin.c:// Jagan+
+../kernel/arch/arm/mach-msm/board-qsd8x50_austin.c:// Jagan-
+../kernel/arch/arm/mach-msm/board-qsd8x50_austin.c:// Jagan+
+../kernel/arch/arm/mach-msm/board-qsd8x50_austin.c:// Jagan-
+../kernel/arch/arm/mach-msm/board-qsd8x50_austin.c:// Jagan+
+../kernel/arch/arm/mach-msm/board-qsd8x50_austin.c:// Jagan-
+../kernel/arch/arm/mach-msm/board-qsd8x50_austin.c:// Jagan+
+../kernel/arch/arm/mach-msm/board-qsd8x50_austin.c:// Jagan-
+../kernel/arch/arm/mach-msm/board-qsd8x50_austin.c:// Jagan+
+../kernel/arch/arm/mach-msm/board-qsd8x50_austin.c:// Jagan-
+../kernel/arch/arm/mach-msm/board-qsd8x50_austin.c:#define MSM_PMEM_SF_SIZE	0x1C91000 /* Jagan+ ... Jagan- */
+../kernel/arch/arm/mach-msm/board-qsd8x50_austin.c:// Jagan+
+../kernel/arch/arm/mach-msm/board-qsd8x50_austin.c:// Jagan-
+../kernel/arch/arm/mach-msm/board-qsd8x50_austin.c:// Jagan+
+../kernel/arch/arm/mach-msm/board-qsd8x50_austin.c:// Jagan-
+../kernel/arch/arm/mach-msm/board-qsd8x50_austin.c:// Jagan+
+../kernel/arch/arm/mach-msm/board-qsd8x50_austin.c:// Jagan-
+../kernel/arch/arm/mach-msm/board-qsd8x50_austin.c:// Jagan+
+../kernel/arch/arm/mach-msm/board-qsd8x50_austin.c:// Jagan-
+../kernel/arch/arm/mach-msm/board-qsd8x50_austin.c:// Jagan+
+../kernel/arch/arm/mach-msm/board-qsd8x50_austin.c:// Jagan-
+../kernel/arch/arm/mach-msm/board-qsd8x50_austin.c:// Jagan+
+../kernel/arch/arm/mach-msm/board-qsd8x50_austin.c:// Jagan-
+../kernel/arch/arm/mach-msm/board-qsd8x50_austin.c:// Jagan+	
+../kernel/arch/arm/mach-msm/board-qsd8x50_austin.c:// Jagan-
+../kernel/arch/arm/mach-msm/board-qsd8x50_austin.c:// Jagan+
+../kernel/arch/arm/mach-msm/board-qsd8x50_austin.c:// Jagan-
+../kernel/arch/arm/mach-msm/board-qsd8x50_austin.c:// Jagan+ 
+../kernel/arch/arm/mach-msm/board-qsd8x50_austin.c:// Jagan-
+../kernel/arch/arm/mach-msm/board-qsd8x50_austin.c:// Jagan+
+../kernel/arch/arm/mach-msm/board-qsd8x50_austin.c:// Jagan-
+../kernel/arch/arm/mach-msm/board-qsd8x50_austin.c:// static int mddi_power_save_on; /* Jagan+ ... Jagan- */
+../kernel/arch/arm/mach-msm/board-qsd8x50_austin.c:// Jagan+
+../kernel/arch/arm/mach-msm/board-qsd8x50_austin.c:// Jagan-
+../kernel/arch/arm/mach-msm/board-qsd8x50_austin.c:// Jagan+
+../kernel/arch/arm/mach-msm/board-qsd8x50_austin.c:// Jagan+	
+../kernel/arch/arm/mach-msm/board-qsd8x50_austin.c:// Jagan+
+../kernel/arch/arm/mach-msm/board-qsd8x50_austin.c:// Jagan-
+../kernel/arch/arm/mach-msm/board-qsd8x50_austin.c:// Jagan+
+../kernel/arch/arm/mach-msm/board-qsd8x50_austin.c:// Jagan-
+../kernel/arch/arm/mach-msm/board-qsd8x50_austin.c:// Jagan+
+../kernel/arch/arm/mach-msm/board-qsd8x50_austin.c:// Jagan-
+../kernel/arch/arm/mach-msm/board-qsd8x50_austin.c:// Jagan+
+../kernel/arch/arm/mach-msm/board-qsd8x50_austin.c:// Jagan-
+../kernel/arch/arm/mach-msm/board-qsd8x50_austin.c:// Jagan+
+../kernel/arch/arm/mach-msm/board-qsd8x50_austin.c:// Jagan-
+../kernel/arch/arm/mach-msm/board-qsd8x50_austin.c:// Jagan+
+../kernel/arch/arm/mach-msm/board-qsd8x50_austin.c:// Jagan-
+../kernel/arch/arm/mach-msm/board-qsd8x50_austin.c:// Jagan+
+../kernel/arch/arm/mach-msm/board-qsd8x50_austin.c:// Jagan-
+../kernel/arch/arm/mach-msm/board-qsd8x50_austin.c:// Jagan+
+../kernel/arch/arm/mach-msm/board-qsd8x50_austin.c:// Jagan-
+../kernel/arch/arm/mach-msm/board-qsd8x50_austin.c:// Jagan+
+../kernel/arch/arm/mach-msm/board-qsd8x50_austin.c:// Jagan-
+../kernel/arch/arm/mach-msm/board-qsd8x50_austin.c:// Jagan+
+../kernel/arch/arm/mach-msm/board-qsd8x50_austin.c:// Jagan-
+../kernel/arch/arm/mach-msm/board-qsd8x50_austin.c:// Jagan+
+../kernel/arch/arm/mach-msm/board-qsd8x50_austin.c:// Jagan-
+../kernel/arch/arm/mach-msm/board-qsd8x50_austin.c:// Jagan+
+../kernel/arch/arm/mach-msm/board-qsd8x50_austin.c:// Jagan-
+../kernel/arch/arm/mach-msm/board-qsd8x50_austin.c:		// Jagan+
+../kernel/arch/arm/mach-msm/board-qsd8x50_austin.c:		// Jagan-
+../kernel/arch/arm/mach-msm/board-qsd8x50_austin.c:// Jagan+
+../kernel/arch/arm/mach-msm/board-qsd8x50_austin.c:// Jagan-
+../kernel/arch/arm/mach-msm/board-qsd8x50_austin.c:// Jagan+
+../kernel/arch/arm/mach-msm/board-qsd8x50_austin.c:// Jagan-
+../kernel/arch/arm/mach-msm/board-qsd8x50_austin.c:// Jagan+
+../kernel/arch/arm/mach-msm/board-qsd8x50_austin.c:	// Jagan-
+../kernel/arch/arm/mach-msm/board-qsd8x50_austin.c:	// Jagan+
+../kernel/arch/arm/mach-msm/board-qsd8x50_austin.c:	// Jagan-	
+../kernel/arch/arm/mach-msm/board-qsd8x50_austin.c:	// Jagan+
+../kernel/arch/arm/mach-msm/board-qsd8x50_austin.c:// Jagan-
+../kernel/arch/arm/mach-msm/board-qsd8x50_austin.c:// Jagan+
+../kernel/arch/arm/mach-msm/board-qsd8x50_austin.c:// Jagan-
+../kernel/arch/arm/mach-msm/board-qsd8x50_austin.c:// Jagan+
+../kernel/arch/arm/mach-msm/board-qsd8x50_austin.c:// Jagan-
+../kernel/arch/arm/mach-msm/board-qsd8x50_austin.c:// Jagan+
+../kernel/arch/arm/mach-msm/board-qsd8x50_austin.c:// Jagan-
+../kernel/arch/arm/mach-msm/board-qsd8x50_austin.c:// Jagan+
+../kernel/arch/arm/mach-msm/board-qsd8x50_austin.c:// Jagan-
+../kernel/arch/arm/mach-msm/board-qsd8x50_austin.c:// Jagan+
+../kernel/arch/arm/mach-msm/board-qsd8x50_austin.c:// Jagan-
+../kernel/arch/arm/mach-msm/board-qsd8x50_austin.c:// Jagan+
+../kernel/arch/arm/mach-msm/board-qsd8x50_austin.c:// Jagan-
+../kernel/arch/arm/mach-msm/board-qsd8x50_austin.c://	&mddi_toshiba_device,  	/* Jagan+ .... Jagan- */
+../kernel/arch/arm/mach-msm/board-qsd8x50_austin.c:#ifdef CONFIG_SMC91X 		/* Jagan+ .... Jagan- */	
+../kernel/arch/arm/mach-msm/board-qsd8x50_austin.c://	&qsd_device_spi,					/ * Jagan+ ... Jagan- */  
+../kernel/arch/arm/mach-msm/board-qsd8x50_austin.c:	&msm_device_uart_dm2,					/* Jagan+ ... Jagan- */
+../kernel/arch/arm/mach-msm/board-qsd8x50_austin.c://	&msm_device_uart1,					/* Jagan+ ... Jagan- */
+../kernel/arch/arm/mach-msm/board-qsd8x50_austin.c://	&msm_device_pmic_leds, /* Jagan+ .. Jagan- */
+../kernel/arch/arm/mach-msm/board-qsd8x50_austin.c:// Jagan+
+../kernel/arch/arm/mach-msm/board-qsd8x50_austin.c:// Jagan-
+../kernel/arch/arm/mach-msm/board-qsd8x50_austin.c:// Jagan+
+../kernel/arch/arm/mach-msm/board-qsd8x50_austin.c:// Jagan-
+../kernel/arch/arm/mach-msm/board-qsd8x50_austin.c:// Jagan+
+../kernel/arch/arm/mach-msm/board-qsd8x50_austin.c:// Jagan-
+../kernel/arch/arm/mach-msm/board-qsd8x50_austin.c://	&msm_batt_device,						/* Jagan+ ... Jagan- */
+../kernel/arch/arm/mach-msm/board-qsd8x50_austin.c:	&qsd_headset_device,						/* Jagan+ ... Jagan- */
+../kernel/arch/arm/mach-msm/board-qsd8x50_austin.c:// Jagan+
+../kernel/arch/arm/mach-msm/board-qsd8x50_austin.c:// Jagan-
+../kernel/arch/arm/mach-msm/board-qsd8x50_austin.c:// Jagan+
+../kernel/arch/arm/mach-msm/board-qsd8x50_austin.c:// Jagan-
+../kernel/arch/arm/mach-msm/board-qsd8x50_austin.c://	audio_gpio_init();								/* Jagan+ ... Jagan- */
+../kernel/arch/arm/mach-msm/board-qsd8x50_austin.c://	msm_qsd_spi_init(); 							/* Jagan+ ... Jagan- */
+../kernel/arch/arm/mach-msm/board-qsd8x50_austin.c://	spi_register_board_info(msm_spi_board_info,				/* Jagan+ ... Jagan- */
+../kernel/arch/arm/mach-msm/board-qsd8x50_austin.c:// Jagan+
+../kernel/arch/arm/mach-msm/board-qsd8x50_austin.c:// Jagan-
+../kernel/arch/arm/mach-msm/board-qsd8x50_austin.c:// Jagan+
+../kernel/arch/arm/mach-msm/board-qsd8x50_austin.c:// Jagan-
+../kernel/arch/arm/mach-msm/rpc_hsusb.c:// Jagan+
+../kernel/arch/arm/mach-msm/rpc_hsusb.c:// Jagan+
+../kernel/arch/arm/mach-msm/rpc_hsusb.c://Jagan-
+../kernel/arch/arm/mach-msm/rpc_hsusb.c:// Jagan+
+../kernel/arch/arm/mach-msm/rpc_hsusb.c:// Jagan-
+../kernel/arch/arm/mach-msm/rpc_hsusb.c:// Jagan+
+../kernel/arch/arm/mach-msm/rpc_hsusb.c:// Jagan-
+../kernel/arch/arm/mach-msm/rpc_hsusb.c:// Jagan+
+../kernel/arch/arm/mach-msm/rpc_hsusb.c:// Jagan-
+../kernel/arch/arm/mach-msm/Kconfig:# Jagan+
+../kernel/arch/arm/mach-msm/Kconfig:# Jagan-	   
+../kernel/arch/arm/configs/austin-perf_defconfig:# Linux kernel version: 2.6.35.7@Jagan
+../kernel/arch/arm/configs/qsd8650-perf_defconfig:# Linux kernel version: 2.6.35.7@Jagan
+../kernel/arch/arm/configs/current_defconfig:# Linux kernel version: 2.6.35.7@Jagan
+../kernel/kernel/power/suspend.c:#ifdef CONFIG_SPEEDUP_RESUME_NOTDOSYNC    // Jagan+
+../kernel/kernel/power/suspend.c:#endif										// Jagan-
+../kernel/kernel/power/wakelock.c:#include <mach/kevent.h>						/* Jagan+ ... Jagan- */
+../kernel/kernel/power/wakelock.c:// Jagan+
+../kernel/kernel/power/wakelock.c:// Jagan-
+../kernel/kernel/power/wakelock.c:// Jagan+
+../kernel/kernel/power/wakelock.c:// Jagan-
+../kernel/kernel/power/wakelock.c:// Jagan+	
+../kernel/kernel/power/wakelock.c:// Jagan-
+../kernel/kernel/power/wakelock.c:// Jagan+
+../kernel/kernel/power/wakelock.c:// Jagan-	
+../kernel/kernel/power/wakelock.c:// Jagan+
+../kernel/kernel/power/wakelock.c:// Jagan-
+../kernel/kernel/power/wakelock.c:// Jagan+
+../kernel/kernel/power/wakelock.c:// Jagan-
+../kernel/kernel/power/wakelock.c:// Jagan+
+../kernel/kernel/power/wakelock.c:// Jagan-
+../kernel/kernel/power/earlysuspend.c:#include <linux/kallsyms.h>	                     /* Jagan+ ... Jagan- */
+../kernel/kernel/power/earlysuspend.c:// Jagan+
+../kernel/kernel/power/earlysuspend.c:// Jagan-
+../kernel/kernel/power/earlysuspend.c:// Jagan+
+../kernel/kernel/power/earlysuspend.c:// Jagan-
+../kernel/kernel/power/earlysuspend.c:	if (!suspend_task) suspend_task = current;	   /* Jagan+ ... Jagan- */
+../kernel/kernel/power/earlysuspend.c:		if (pos->suspend != NULL) {	/* Jagan+  */
+../kernel/kernel/power/earlysuspend.c:		}							/* Jagan- */
+../kernel/kernel/power/earlysuspend.c:// Jagan+
+../kernel/kernel/power/earlysuspend.c:// Jagan-
+../kernel/kernel/power/earlysuspend.c:#ifdef CONFIG_SPEEDUP_KEYRESUME				// Jagan+
+../kernel/kernel/power/earlysuspend.c:	if (!suspend_task) suspend_task = current;  // Jagan-
+../kernel/kernel/power/earlysuspend.c:			earlysuspend_wdset(pos->resume);	// Jagan+
+../kernel/kernel/power/earlysuspend.c:			earlysuspend_wdclr(NULL);			// Jagan-	
+../kernel/kernel/power/earlysuspend.c:#ifdef CONFIG_SPEEDUP_KEYRESUME				// Jagan+
+../kernel/kernel/power/earlysuspend.c:#endif										// Jagan-
+../kernel/kernel/power/consoleearlysuspend.c:#include <linux/delay.h>				// Jagan
+../kernel/kernel/power/consoleearlysuspend.c:	mdelay(10); // Wait for lcd panel refresh.  // Jagan
+../kernel/kernel/power/Kconfig:# Jagan+
+../kernel/kernel/power/Kconfig:# Jagan-
+../kernel/kernel/power/Kconfig:# Jagan+	
+../kernel/kernel/power/Kconfig:# Jagan-
+../kernel/fs/super.c:// Jagan+
+../kernel/fs/super.c:// Jagan-
+../kernel/drivers/net/wireless/Makefile:# Jagan+
+../kernel/drivers/net/wireless/Makefile:# Jagan-
+../kernel/drivers/net/wireless/Kconfig:# Jagan+
+../kernel/drivers/net/wireless/Kconfig:# Jagan-
+../kernel/drivers/misc/Makefile:# Jagan+
+../kernel/drivers/misc/Makefile:# Jagan-
+../kernel/drivers/misc/Kconfig:# Jagan+
+../kernel/drivers/misc/Kconfig:# Jagan-
+../kernel/drivers/staging/android/Makefile:# Jagan+
+../kernel/drivers/staging/android/Makefile:# Jagan-
+../kernel/drivers/staging/android/timed_output.c:static DEVICE_ATTR(enable, 00777, enable_show, enable_store);   // Jagan
+../kernel/drivers/staging/android/Kconfig:# Jagan+
+../kernel/drivers/staging/android/Kconfig:# Jagan-
+../kernel/drivers/mmc/core/sdio_bus.c:// Jagan+
+../kernel/drivers/mmc/core/sdio_bus.c:// Jagan-
+../kernel/drivers/mmc/core/sdio_bus.c:	.suspend	= sdio_bus_suspend,		// Jagan
+../kernel/drivers/mmc/core/sdio_bus.c:	.resume		= sdio_bus_resume,		// Jagan	
+../kernel/drivers/mmc/core/sd.c:// Jagan+
+../kernel/drivers/mmc/core/sd.c:// Jagan-
+../kernel/drivers/mmc/core/sd.c:// Jagan+
+../kernel/drivers/mmc/core/sd.c:// Jagan-
+../kernel/drivers/mmc/core/sdio_irq.c:// Jagan+
+../kernel/drivers/mmc/core/sdio_irq.c:// Jagan-
+../kernel/drivers/mmc/core/sdio_irq.c:	if (ret) goto err_irq_en;	// Jagan
+../kernel/drivers/mmc/core/sdio_irq.c:// Jagan+
+../kernel/drivers/mmc/core/sdio_irq.c:// Jagan-	
+../kernel/drivers/mmc/core/sdio_irq.c:// Jagan+
+../kernel/drivers/mmc/core/sdio_irq.c:// Jagan-
+../kernel/drivers/mmc/card/block.c:// Jagan+
+../kernel/drivers/mmc/card/block.c:// Jagan-
+../kernel/drivers/mmc/card/block.c:// Jagan+
+../kernel/drivers/mmc/card/block.c:// Jagan-	
+../kernel/drivers/mmc/card/block.c:			// Jagan+
+../kernel/drivers/mmc/card/block.c:			// Jagan-
+../kernel/drivers/mmc/card/block.c:			// Jagan+
+../kernel/drivers/mmc/card/block.c:			// Jagan-
+../kernel/drivers/mmc/card/block.c:// Jagan+
+../kernel/drivers/mmc/card/block.c:// Jagan-
+../kernel/drivers/mmc/card/queue.c:	struct request *req;  // Jagan
+../kernel/drivers/mmc/card/queue.c:// Jagan+
+../kernel/drivers/mmc/card/queue.c:// Jagan-		
+../kernel/drivers/mmc/host/msm_sdcc.h:// Jagan+
+../kernel/drivers/mmc/host/msm_sdcc.h:// Jagan-
+../kernel/drivers/mmc/host/msm_sdcc.h:// Jagan+
+../kernel/drivers/mmc/host/msm_sdcc.h:// Jagan-
+../kernel/drivers/i2c/chips/Makefile:# Jagan+
+../kernel/drivers/i2c/chips/Makefile:# Jagan-
+../kernel/drivers/i2c/chips/Kconfig:# Jagan+
+../kernel/drivers/i2c/chips/Kconfig:# Jagan-
+../kernel/drivers/mtd/devices/Makefile:# Jagan+
+../kernel/drivers/mtd/devices/Makefile:# Jagan-
+../kernel/drivers/media/video/msm/Makefile:# Jagan+
+../kernel/drivers/media/video/msm/Makefile:# Jagan-
+../kernel/drivers/media/video/msm/msm_vfe8x.c:	// Jagan+
+../kernel/drivers/media/video/msm/msm_vfe8x.c:	// Jagan-
+../kernel/drivers/media/video/msm/msm_vfe8x_proc.c:// Jagan+
+../kernel/drivers/media/video/msm/msm_vfe8x_proc.c:// Jagan-
+../kernel/drivers/media/video/msm/msm_vfe8x_proc.c:	uint32_t printed;	// Jagan
+../kernel/drivers/media/video/msm/msm_vfe8x_proc.c:// Jagan+
+../kernel/drivers/media/video/msm/msm_vfe8x_proc.c:// Jagan-	
+../kernel/drivers/media/video/msm/msm_vfe8x_proc.c:// Jagan+
+../kernel/drivers/media/video/msm/msm_vfe8x_proc.c:// Jagan-
+../kernel/drivers/media/video/msm/msm_vfe8x_proc.c:// Jagan+
+../kernel/drivers/media/video/msm/msm_vfe8x_proc.c:// Jagan-
+../kernel/drivers/media/video/msm/msm_vfe8x_proc.c:// Jagan+
+../kernel/drivers/media/video/msm/msm_vfe8x_proc.c:// Jagan-
+../kernel/drivers/media/video/msm/msm_vfe8x_proc.c:	// Jagan+
+../kernel/drivers/media/video/msm/msm_vfe8x_proc.c:	// Jagan-
+../kernel/drivers/media/video/msm/Kconfig:# Jagan+
+../kernel/drivers/media/video/msm/Kconfig:# Jagan-
+../kernel/drivers/media/video/msm/Kconfig:# Jagan+
+../kernel/drivers/media/video/msm/Kconfig:# Jagan-
+../kernel/drivers/media/video/msm/msm_io8x.c:#include <mach/pm_log.h>				// Jagan
+../kernel/drivers/media/video/msm/msm_io8x.c:// Jagan+
+../kernel/drivers/media/video/msm/msm_io8x.c:// Jagan-
+../kernel/drivers/media/video/msm/msm_io8x.c:// Jagan+
+../kernel/drivers/media/video/msm/msm_io8x.c:// Jagan-
+../kernel/drivers/media/video/msm/msm_io8x.c:// Jagan+
+../kernel/drivers/media/video/msm/msm_io8x.c:// Jagan-
+../kernel/drivers/leds/Makefile:# Jagan+
+../kernel/drivers/leds/Makefile:# Jagan-
+../kernel/drivers/leds/Kconfig:# Jagan+
+../kernel/drivers/leds/Kconfig:# Jagan-
+../kernel/drivers/power/Makefile:# Jagan+
+../kernel/drivers/power/Makefile:# Jagan-
+../kernel/drivers/power/Kconfig:# Jagan+
+../kernel/drivers/power/Kconfig:# Jagan-
+../kernel/drivers/input/keyboard/Makefile:# Jagan+
+../kernel/drivers/input/keyboard/Makefile:# Jagan-
+../kernel/drivers/input/keyboard/Kconfig:# Jagan+
+../kernel/drivers/input/keyboard/Kconfig:# Jagan-
+../kernel/drivers/input/misc/Makefile:# Jagan+
+../kernel/drivers/input/misc/Makefile:# Jagan-
+../kernel/drivers/input/misc/cover.c:#include "../../../arch/arm/mach-msm/proc_comm.h"    		/* Jagan+ ... Jagan- */
+../kernel/drivers/input/misc/cover.c:	    kernel_power_off();    			/* Jagan+ ... Jagan- */
+../kernel/drivers/input/misc/Kconfig:# Jagan+
+../kernel/drivers/input/misc/Kconfig:# Jagan-
+../kernel/drivers/input/touchscreen/Makefile:# Jagan+
+../kernel/drivers/input/touchscreen/Makefile:# Jagan-
+../kernel/drivers/input/touchscreen/Kconfig:# Jagan+
+../kernel/drivers/input/touchscreen/Kconfig:# Jagan-
+../kernel/drivers/input/touchscreen/Kconfig:# Jagan+
+../kernel/drivers/input/touchscreen/Kconfig:# Jagan-
+../kernel/drivers/video/Makefile:# Jagan+
+../kernel/drivers/video/Makefile:# Jagan-
+../kernel/drivers/video/msm_austin/mddi.c:	struct msm_fb_data_type *mfd; 						/* Jagan+ ... Jagan- */
+../kernel/drivers/video/msm_austin/mddi.c:	mfd = platform_get_drvdata(pdev); 					/* Jagan+ ... Jagan- */
+../kernel/drivers/video/msm_austin/mddi.c:	pm_qos_update_request(mfd->pm_qos_req, PM_QOS_DEFAULT_VALUE);		/* Jagan+ ... Jagan- */
+../kernel/drivers/video/msm_austin/mddi.c:	pm_qos_update_request(mfd->pm_qos_req, 65000);				/* Jagan+ ... Jagan- */
+../kernel/drivers/video/msm_austin/mddi.c:	pm_qos_add_request(PM_QOS_SYSTEM_BUS_FREQ ,PM_QOS_DEFAULT_VALUE);		/* Jagan+ ... Jagan- */
+../kernel/drivers/video/msm_austin/mddi_auo.c:// Jagan+	
+../kernel/drivers/video/msm_austin/mddi_auo.c:// Jagan-	
+../kernel/drivers/video/msm_austin/lcdc.c:	struct msm_fb_data_type *mfd;						/* Jagan+ ... Jagan- */
+../kernel/drivers/video/msm_austin/lcdc.c:	mfd = platform_get_drvdata(pdev);					/* Jagan+ ... Jagan- */
+../kernel/drivers/video/msm_austin/lcdc.c:	pm_qos_update_request(mfd->pm_qos_req, PM_QOS_DEFAULT_VALUE);		/* Jagan+ ... Jagan- */
+../kernel/drivers/video/msm_austin/lcdc.c:	pm_qos_update_request(mfd->pm_qos_req, pm_qos_rate);			/* Jagan+ ... Jagan- */
+../kernel/drivers/video/msm_austin/lcdc.c:// Jagan+
+../kernel/drivers/video/msm_austin/lcdc.c:// Jagan-
+../kernel/drivers/video/msm_austin/lcdc.c:	pm_qos_add_request(PM_QOS_SYSTEM_BUS_FREQ ,PM_QOS_DEFAULT_VALUE);			/* Jagan+ ... Jagan- */
+../kernel/drivers/video/msm_austin/msm_fb.h:	struct pm_qos_request_list *pm_qos_req; /* Jagan+ ... Jagan- */
+../kernel/drivers/video/msm/Makefile:# Jagan+
+../kernel/drivers/video/msm/Makefile:# Jagan-
+../kernel/drivers/video/Kconfig:# Jagan+
+../kernel/drivers/video/Kconfig:# Jagan-
+../kernel/drivers/video/Kconfig:# Jagan+
+../kernel/drivers/video/Kconfig:# Jagan-
+../kernel/drivers/video/Kconfig:# Jagan+
+../kernel/drivers/video/Kconfig:# Jagan-
+../kernel/drivers/video/Kconfig:# Jagan+
+../kernel/drivers/video/Kconfig:# Jagan-
+../kernel/drivers/video/Kconfig:# Jagan+
+../kernel/drivers/video/Kconfig:# Jagan-
+../kernel/drivers/video/Kconfig:# Jagan+
+../kernel/drivers/video/Kconfig:# Jagan-
