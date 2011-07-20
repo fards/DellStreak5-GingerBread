@@ -31,5 +31,32 @@ Non Dell headsets are ignored.
 Lots of other things
 
 
+++++++++++++++++++++++++++++++++++++++++++++
+Build instructions. 
+
+Get AOSP code from Android git
+following the instructions here. 
+http://source.android.com/source/index.html
+
+after the repo has finished. 
+cd to the ANDROID_BUILD_DIRECTORY you created that has your source code in it
+
+mkdir kernel
+cd kernel
+git clone this kernel to that directory (or download it manually) 
+make sure the files are in the correct folder ANDROID_BUILD_DIRECTORY/kernel
+
+export PATH=$PATH:~/ANDROID_BUILD_DIRECTORY/prebuilt/linux-x86/toolchain/arm-eabi-4.4.3/bin
+export CROSS_COMPILE=arm-eabi-
+export ARCH=arm
+cp arch/arm/configs/austin_perf_defconfig .config
+make menuconfig 
+make -j8
+
+if there's errors correct them 
+make clean 
+make -j8
+
+if theres no errors you need to extract a ramdisk and mkbootimg based on that to create a valid boot.img
 
 
