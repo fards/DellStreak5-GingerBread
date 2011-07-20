@@ -49,7 +49,7 @@ make sure the files are in the correct folder ANDROID_BUILD_DIRECTORY/kernel
 export PATH=$PATH:~/ANDROID_BUILD_DIRECTORY/prebuilt/linux-x86/toolchain/arm-eabi-4.4.3/bin
 export CROSS_COMPILE=arm-eabi-
 export ARCH=arm
-cp arch/arm/configs/austin_perf_defconfig .config
+cp rename_to_.config .config
 make menuconfig 
 make -j8
 
