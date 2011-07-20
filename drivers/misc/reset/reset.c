@@ -1,7 +1,6 @@
 #include <linux/init.h>
 #include <linux/module.h>
-
-#include "/home/ian/GB/kernel/arch/arm/mach-msm/proc_comm.h"
+#include "../../../arch/arm/mach-msm/proc_comm.h"
 
 MODULE_LICENSE("Dual BSD/GPL");
 
