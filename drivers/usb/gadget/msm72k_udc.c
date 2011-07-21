@@ -255,12 +255,17 @@ static ssize_t print_switch_state(struct switch_dev *sdev, char *buf)
 	return sprintf(buf, "%s\n", sdev->state ? "online" : "offline");
 }
 
+
 static inline enum chg_type usb_get_chg_type(struct usb_info *ui)
 {
 	if ((readl(USB_PORTSC) & PORTSC_LS) == PORTSC_LS)
 		return USB_CHG_TYPE__WALLCHARGER;
 	else
+	{
+		if (ui->gadget.speed == USB_SPEED_UNKNOWN)
+			return USB_CHG_TYPE__WALLCHARGER;
 		return USB_CHG_TYPE__SDP;
+	}
 }
 
 #define USB_WALLCHARGER_CHG_CURRENT 1800
