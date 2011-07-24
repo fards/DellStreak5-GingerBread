@@ -156,16 +156,16 @@ fi
 res="${res}${CONFIG_LOCALVERSION}${LOCALVERSION}"
 
 # scm version string if not at a tagged commit
-if test "$CONFIG_LOCALVERSION_AUTO" = "y"; then
-	# full scm version string
-	res="$res$(scm_version)"
-else
-	# apped a plus sign if the repository is not in a clean tagged
-	# state and  LOCALVERSION= is not specified
-	if test "${LOCALVERSION+set}" != "set"; then
-		scm=$(scm_version --short)
-		res="$res${scm:++}"
-	fi
-fi
+#if test "$CONFIG_LOCALVERSION_AUTO" = "y"; then
+#	# full scm version string
+#      res="$res$(scm_version)"
+#else
+#	# apped a plus sign if the repository is not in a clean tagged
+#	# state and  LOCALVERSION= is not specified
+#	if test "${LOCALVERSION+set}" != "set"; then
+#		scm=$(scm_version --short)
+#		res="$res${scm:++}"
+#	fi
+#fi
 
 echo "$res"
