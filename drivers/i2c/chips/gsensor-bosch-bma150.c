@@ -1483,7 +1483,10 @@ static long misc_gsensor_ioctl(struct file *fp, unsigned int cmd, unsigned long 
 	struct gsensor_ioctl_accel_t local_gsensor_ioctl_accel;
 	struct gsensor_ioctl_calibrate_t calibrate_data;
 	unsigned short offset[3];
-
+// AWD_Maniac+
+	unsigned char rwbuff_in[8], rwbuff_out[8];
+	short rawbuff[8];
+// AWD_Maniac-
 	GSENSOR_LOGD(KERN_DEBUG "[GSENSOR] misc_gsensor_ioctl+\n");
 
 	if (_IOC_TYPE(cmd) != GSENSOR_IOC_MAGIC)
@@ -1734,13 +1737,60 @@ static long misc_gsensor_ioctl(struct file *fp, unsigned int cmd, unsigned long 
 				ret = -EFAULT;
 			}
 			break;
-
+// AWD_Maniac+
+		case GSENSOR_IOC_READ_REG:
+			if (copy_from_user(rwbuff_in, (void __user*) arg, _IOC_SIZE(cmd)))
+			{
+				GSENSOR_LOGE(KERN_ERR "[GSENSOR] misc_gsensor_ioctl::GSENSOR_IOC_READ_REG:copy_from_user fail-\n");
+				ret = -EFAULT;
+			}
+			ret = i2c_gsensor_read(gsensor_driver_data.i2c_gsensor_client, rwbuff_in[1], rwbuff_out, rwbuff_in[0]);
+			if (ret < 0)
+			{
+				GSENSOR_LOGE(KERN_ERR "[GSENSOR] gsensor_set_ctrl_0b::i2c_gsensor_read fail!!-ret:%d\n", ret);
+				return ret;
+			}
+			ret = 0;
+			if (copy_to_user((void __user*) arg, rwbuff_out, _IOC_SIZE(cmd)))
+			{
+				GSENSOR_LOGE(KERN_ERR "[GSENSOR] misc_gsensor_ioctl::GSENSOR_IOC_EM_READ_ID:copy_to_user fail-\n");
+				ret = -EFAULT;
+			}
+			break;
+		case GSENSOR_IOC_WRITE_REG:
+			if (copy_from_user(rwbuff_in, (void __user*) arg, _IOC_SIZE(cmd)))
+			{
+				GSENSOR_LOGE(KERN_ERR "[GSENSOR] misc_gsensor_ioctl::GSENSOR_IOC_WRITE_REG:copy_from_user fail-\n");
+				ret = -EFAULT;
+			}
+			ret = i2c_gsensor_write(gsensor_driver_data.i2c_gsensor_client, rwbuff_in[1], rwbuff_in + 2, rwbuff_in[0]-1);
+			if (ret < 0)
+			{
+				GSENSOR_LOGE(KERN_ERR "[GSENSOR] gsensor_set_ctrl_0b::i2c_gsensor_read fail!!-ret:%d\n", ret);
+				return ret;
+			}
+			ret = 0;
+			break;
+		case GSENSOR_IOC_READ_RAW:
+			memset(rawbuff, 0, sizeof(rawbuff));
+			rawbuff[0] = gsensor_driver_data.curr_acc_data.accel_x;
+			rawbuff[1] = gsensor_driver_data.curr_acc_data.accel_y;
+			rawbuff[2] = gsensor_driver_data.curr_acc_data.accel_z;
+			rawbuff[3] = gsensor_driver_data.curr_acc_data.temp;
+			GSENSOR_LOGE(KERN_ERR "[GSENSOR] Read RAW: %04X %04X %04X -\n", rawbuff[0], rawbuff[1], rawbuff[2]);
+			if (copy_to_user((void __user*) arg, rawbuff, _IOC_SIZE(cmd)))
+			{
+				GSENSOR_LOGE(KERN_ERR "[GSENSOR] misc_gsensor_ioctl::GSENSOR_IOC_READ_RAW:copy_to_user fail-\n");
+				ret = -EFAULT;
+			}
+			break;
+// AWD_Maniac-
 		default:
 			GSENSOR_LOGW(KERN_WARNING "[GSENSOR] misc_gsensor_ioctl::deafult\n");
 			break;
 	}
 
-	GSENSOR_LOGD(KERN_DEBUG "[GSENSOR] misc_gsensor_ioctl-\n");
+	GSENSOR_LOGD(KERN_DEBUG "[GSENSOR] misc_gsensor_ioctl- ret = %d\n", ret);
 	return ret;
 }
 

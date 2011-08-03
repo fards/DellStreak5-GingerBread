@@ -124,6 +124,11 @@ static void AKECS_Reset(void)
 	gpio_set_value(pdata->reset, 0);
 	udelay(120);
 	gpio_set_value(pdata->reset, 1);
+// AWD_Maniac+
+//	Added this delay just to be "safe", may not be needed but
+//	I see no big deal in spending an additional 120 uSecs
+	udelay(120);
+// AWD_Maniac-
 }
 
 static int AKECS_StartMeasure(void)
@@ -607,7 +612,9 @@ int akm8973_probe(struct i2c_client *client, const struct i2c_device_id *id)
 		goto exit_platform_data_null;
 	}
 	this_client = client;
-
+// AWD_Maniac +
+	AKECS_Reset();
+// AWD_Maniac -
 	err = AKECS_PowerDown();
 	if (err < 0) {
 		printk(KERN_ERR"AKM8973 akm8973_probe: set power down mode error\n");

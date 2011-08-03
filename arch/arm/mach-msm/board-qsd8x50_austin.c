@@ -94,6 +94,12 @@
 #include <linux/usb/android_composite.h>
 #endif
 
+// AWD_Maniac +
+// Add support for AKM8973 Driver
+#ifdef CONFIG_SENSORS_AKM8973
+#include <linux/akm8973.h>
+#endif
+
 /*
 // Jagan+
 #define TOUCHPAD_SUSPEND 	34
@@ -170,6 +176,36 @@
 #define DRM_KEY_SIZE        400 
 #define BT_MAC_ADDR_SIZE    12  
 #define WLAN_MAC_ADDR_SIZE  12  
+
+
+// AWD_Maniac+
+
+#ifdef CONFIG_SENSORS_AKM8973
+
+// Austin board-specific GPIOs (Dell Streak Mini5)
+
+#define ECOMPASS_RST_GPIO_NUM 144
+#define ECOMPASS_INT_GPIO_NUM 146
+#define ECOMPASS_I2C_ADDR 0x1C
+
+// This part was copied from MAHIMAHI board
+
+#define AUSTIN_PROJECT_NAME          "qsd8x50"
+#define AUSTIN_LAYOUTS { 			   \
+	{ {-1,  0, 0}, { 0, -1,  0}, {0, 0,  1} }, \
+	{ { 0, -1, 0}, { 1,  0,  0}, {0, 0, -1} }, \
+	{ { 0, -1, 0}, { 1,  0,  0}, {0, 0,  1} }, \
+	{ {-1,  0, 0}, { 0,  0, -1}, {0, 1,  0} }  \
+}
+
+static struct akm8973_platform_data compass_platform_data = {
+	.layouts = AUSTIN_LAYOUTS,
+	.project_name = AUSTIN_PROJECT_NAME,
+	.reset = ECOMPASS_RST_GPIO_NUM,
+	.intr = ECOMPASS_INT_GPIO_NUM,
+};
+#endif
+// AWD_Maniac-
 
 typedef struct
 {
@@ -1726,6 +1762,17 @@ static struct i2c_board_info msm_i2c_board_info[] __initdata = {
 	#endif
 	// Jagan-
 	
+	// AWD_Maniac+
+	#ifdef CONFIG_SENSORS_AKM8973
+	{
+			I2C_BOARD_INFO("akm8973", ECOMPASS_I2C_ADDR),
+			.type           = "akm8973",
+			.irq            = MSM_GPIO_TO_INT(ECOMPASS_INT_GPIO_NUM),
+			.platform_data  = &compass_platform_data
+	},
+	#endif
+	// AWD_Maniac-
+
 	// Jagan+
 	#ifdef CONFIG_BCOM_FM
 	{

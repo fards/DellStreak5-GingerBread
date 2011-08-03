@@ -92,5 +92,10 @@ struct gsensor_ioctl_calibrate_t {
 #define GSENSOR_IOC_READ_DIRECT				_IOR(GSENSOR_IOC_MAGIC, 9, struct gsensor_ioctl_t)
 #define GSENSOR_IOC_EM_READ_ID				_IOR(GSENSOR_IOC_MAGIC, 10, unsigned char)
 #define GSENSOR_IOC_SET_CALIB_PARM_EEPROM	_IOW(GSENSOR_IOC_MAGIC, 11, struct gsensor_ioctl_calibrate_t)
+// AWD_Maniac+
+#define GSENSOR_IOC_READ_REG				_IOR(GSENSOR_IOC_MAGIC, 12, unsigned char[8])
+#define GSENSOR_IOC_WRITE_REG				_IOW(GSENSOR_IOC_MAGIC, 13, unsigned char[8])
+#define GSENSOR_IOC_READ_RAW				_IOR(GSENSOR_IOC_MAGIC, 15, short[8])
+// AWD_Maniac-
 #endif
 
