@@ -1743,6 +1743,13 @@ static long misc_gsensor_ioctl(struct file *fp, unsigned int cmd, unsigned long 
 			{
 				GSENSOR_LOGE(KERN_ERR "[GSENSOR] misc_gsensor_ioctl::GSENSOR_IOC_READ_REG:copy_from_user fail-\n");
 				ret = -EFAULT;
+				break;
+			}
+			if (rwbuff_in[0] > sizeof(rwbuff_in))
+			{
+				GSENSOR_LOGE(KERN_ERR "[GSENSOR] misc_gsensor_ioctl::GSENSOR_IOC_READ_REG: invalid data len (%d)-\n", rwbuff_in[0]);
+				ret = -EFAULT;
+				break;
 			}
 			ret = i2c_gsensor_read(gsensor_driver_data.i2c_gsensor_client, rwbuff_in[1], rwbuff_out, rwbuff_in[0]);
 			if (ret < 0)
@@ -1763,6 +1770,12 @@ static long misc_gsensor_ioctl(struct file *fp, unsigned int cmd, unsigned long 
 				GSENSOR_LOGE(KERN_ERR "[GSENSOR] misc_gsensor_ioctl::GSENSOR_IOC_WRITE_REG:copy_from_user fail-\n");
 				ret = -EFAULT;
 			}
+			if (rwbuff_in[0] < 2 || rwbuff_in[0] > 6)
+			{
+				GSENSOR_LOGE(KERN_ERR "[GSENSOR] misc_gsensor_ioctl::GSENSOR_IOC_WRITE_REG: invalid data len (%d)-\n", rwbuff_in[0]);
+				ret = -EFAULT;
+				break;
+			}
 			ret = i2c_gsensor_write(gsensor_driver_data.i2c_gsensor_client, rwbuff_in[1], rwbuff_in + 2, rwbuff_in[0]-1);
 			if (ret < 0)
 			{
@@ -1777,7 +1790,7 @@ static long misc_gsensor_ioctl(struct file *fp, unsigned int cmd, unsigned long 
 			rawbuff[1] = gsensor_driver_data.curr_acc_data.accel_y;
 			rawbuff[2] = gsensor_driver_data.curr_acc_data.accel_z;
 			rawbuff[3] = gsensor_driver_data.curr_acc_data.temp;
-			GSENSOR_LOGE(KERN_ERR "[GSENSOR] Read RAW: %04X %04X %04X -\n", rawbuff[0], rawbuff[1], rawbuff[2]);
+			GSENSOR_LOGD(KERN_DEBUG "[GSENSOR] Read RAW: %04X %04X %04X -\n", rawbuff[0], rawbuff[1], rawbuff[2]);
 			if (copy_to_user((void __user*) arg, rawbuff, _IOC_SIZE(cmd)))
 			{
 				GSENSOR_LOGE(KERN_ERR "[GSENSOR] misc_gsensor_ioctl::GSENSOR_IOC_READ_RAW:copy_to_user fail-\n");
