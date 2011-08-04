@@ -22,7 +22,10 @@ Sensors dont work at userspace level *******FIXED PARTIALLY
 the kernel uses "Sensors_daemon" a mid layer that messes with the HAL that we don't have code for. 
 At low level the sensors work
 
-voice is picked up by mic on first call after boot, but does otherwise work 
+voice is picked up by mic on first outgoing call after boot, fine on incoming,
+but does otherwise work. workaround is to call voicemail first. 
+
+
 12v usb car charger isn't recognised ******** FIXED 
 
 Non Dell headsets are ignored. 
