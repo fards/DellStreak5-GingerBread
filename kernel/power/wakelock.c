@@ -255,7 +255,7 @@ static long has_wake_lock_locked(int type)
 #ifdef CONFIG_WAKELOCK_WATCHDOG
 static void watchdog_func(unsigned long data)
 {
-	kevent_trigger(KEVENT_DUMP_WAKELOCKS);
+	//kevent_trigger(KEVENT_DUMP_WAKELOCKS);
 	wake_lock_timeout(&watchdog_wake_lock, HZ*10);
 }
 static DEFINE_TIMER(watchdog_timer, watchdog_func, 0, 0);
