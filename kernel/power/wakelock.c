@@ -255,7 +255,7 @@ static long has_wake_lock_locked(int type)
 #ifdef CONFIG_WAKELOCK_WATCHDOG
 static void watchdog_func(unsigned long data)
 {
-	kevent_trigger(KEVENT_DUMP_WAKELOCKS);
+	//kevent_trigger(KEVENT_DUMP_WAKELOCKS);
 	wake_lock_timeout(&watchdog_wake_lock, HZ*10);
 }
 static DEFINE_TIMER(watchdog_timer, watchdog_func, 0, 0);
@@ -302,9 +302,9 @@ static void suspend(struct work_struct *work)
 		pr_info("suspend: enter suspend\n");
 	suspend_task = current;
 	mod_timer(&suspend_watchdog_timer, jiffies + HZ*60*3);
-// del_timer(&watchdog_timer);
+	del_timer(&watchdog_timer);
 	ret = pm_suspend(requested_suspend_state);
-//	mod_timer(&watchdog_timer, jiffies + HZ*60*60);
+	mod_timer(&watchdog_timer, jiffies + HZ*60*60);
 	del_timer(&suspend_watchdog_timer);
 // Jagan-
 	if (debug_mask & DEBUG_EXIT_SUSPEND) {

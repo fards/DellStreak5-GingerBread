@@ -55,7 +55,7 @@ void q6audio_dsp_not_responding(void)
 	}
 	// Jagan+
 	pr_err("Notify AP to show dialog\n");
-	kevent_trigger(KEVENT_ADSP_CRASH);
+	//kevent_trigger(KEVENT_ADSP_CRASH);
 	// Jagan-
 //	BUG();
 }

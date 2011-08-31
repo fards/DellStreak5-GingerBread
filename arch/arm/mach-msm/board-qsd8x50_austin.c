@@ -107,7 +107,7 @@
 // Jagan-
 */
 
-#define MSM_PMEM_SF_SIZE   0x4000000/* Jagan+ ... Jagan- */
+#define MSM_PMEM_SF_SIZE   0x1c91000/* Jagan+ ... Jagan- */
 
 #define SMEM_SPINLOCK_I2C	"S:6"
 
