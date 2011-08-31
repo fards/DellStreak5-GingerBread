@@ -24,9 +24,14 @@ void suspend_device_irqs(void)
 {
 	struct irq_desc *desc;
 	int irq;
+<<<<<<< HEAD
 
 	for_each_irq_desc_reverse(irq, desc) {
 		unsigned long flags;
+=======
+	for_each_irq_desc_reverse(irq, desc) {
+			unsigned long flags;
+>>>>>>> 895c8dc09a8311372de00aab8154dd4a296f076d
 
 		raw_spin_lock_irqsave(&desc->lock, flags);
 		__disable_irq(desc, irq, true);
